@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 import {HttpClientModule} from "@angular/common/http";
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import {RouterModule} from "@angular/router";
@@ -10,23 +9,30 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { PhotographyComponent } from './photography/photography.component';
 import { ApplicationsComponent } from './applications/applications.component';
 import { ResumeComponent } from './resume/resume.component';
+import { CandidPhotographyComponent } from './candid-photography/candid-photography.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+import {AlertModule} from "ngx-bootstrap";
 
 const appRoutes = [
   {
     path: "",
     component: MainPageComponent,
+  },
+  {
+    path: "resume",
+    component: ResumeComponent
+  },
+  {
+    path: "applications",
+    component: ApplicationsComponent
+  },
+  {
+    path: "photography",
+    component: PhotographyComponent,
     children: [
       {
-        path: "resume",
-        component: ResumeComponent
-      },
-      {
-        path: "applications",
-        component: ApplicationsComponent
-      },
-      {
-        path: "photography",
-        component: PhotographyComponent
+        path: "candid",
+        component: CandidPhotographyComponent
       }
     ]
   },
@@ -43,10 +49,12 @@ const appRoutes = [
     MainPageComponent,
     PhotographyComponent,
     ApplicationsComponent,
-    ResumeComponent
+    ResumeComponent,
+    CandidPhotographyComponent,
+    NavBarComponent
   ],
   imports: [
-    NgbModule.forRoot(),
+    AlertModule.forRoot(),
     RouterModule.forRoot(
       appRoutes,
       {enableTracing: true}
