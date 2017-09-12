@@ -1,4 +1,11 @@
-<p>
-  main-page works!
-</p>
-<router-outlet></router-outlet>
+<div *ngFor="let item of MainMenuItems" class="row selection-option-container" [style.height]="getItemHeight()">
+  <div class="col-sm-12 selection-option-column">
+    <div class="selection-option-link-container">
+      <a routerLink="{{item.RouterURL}}" class="selection-option-link">
+        <div class="selection-option-content-container">
+          <span class="selection-title-text">{{item.Title}}</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>

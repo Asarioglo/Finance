@@ -1,5 +1,4 @@
-#face-image {
-  height: auto;
-  max-width: 100%;
-  display: block;
-}
+@import "../../assets/resume/css/style.css";
+@import "../../assets/resume/css/responsive.css";
+@import "//fonts.googleapis.com/css?family=Kristi|Alegreya+Sans:300";
+@import "//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css";

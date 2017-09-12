@@ -1,7 +1,12 @@
 .content {
-  width: 70%;
-  margin-left:auto;
-  margin-right:auto;
   height: calc(100% - 56px);
-  background: rgba(196, 212, 215, 0.2);
+  background: rgba(112, 123, 126, 0.2);
+  text-align: center;
+}
+
+.tmp {
+  color: #558C89;
+  color: #74AFAD;
+  color: #D9853B;
+  color: #ECECEA;
 }
