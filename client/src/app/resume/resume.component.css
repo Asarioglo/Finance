@@ -2,3 +2,7 @@
 @import "../../assets/resume/css/responsive.css";
 @import "//fonts.googleapis.com/css?family=Kristi|Alegreya+Sans:300";
 @import "//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css";
+
+.container {
+  margin-top: 0;
+}
