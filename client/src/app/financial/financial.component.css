@@ -1,0 +1,7 @@
+.financial-content, #financial-content-container, #sidebar-container {
+  height: 100%;
+}
+
+.financial-content {
+  margin-right: 0;
+}

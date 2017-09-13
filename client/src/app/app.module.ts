@@ -12,6 +12,9 @@ import { ResumeComponent } from './resume/resume.component';
 import { CandidPhotographyComponent } from './candid-photography/candid-photography.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import {AlertModule} from "ngx-bootstrap";
+import { FinancialComponent } from './financial/financial.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { BasicValuationComponent } from './financial/components/basic-valuation/basic-valuation.component';
 
 const appRoutes = [
   {
@@ -24,7 +27,8 @@ const appRoutes = [
   },
   {
     path: "applications",
-    component: ApplicationsComponent
+    component: ApplicationsComponent,
+    children: []
   },
   {
     path: "photography",
@@ -33,6 +37,16 @@ const appRoutes = [
       {
         path: "candid",
         component: CandidPhotographyComponent
+      }
+    ]
+  },
+  {
+    path: "applications/financial",
+    component: FinancialComponent,
+    children: [
+      {
+        path: "basic-valuation",
+        component: BasicValuationComponent
       }
     ]
   },
@@ -51,7 +65,10 @@ const appRoutes = [
     ApplicationsComponent,
     ResumeComponent,
     CandidPhotographyComponent,
-    NavBarComponent
+    NavBarComponent,
+    FinancialComponent,
+    SidebarComponent,
+    BasicValuationComponent
   ],
   imports: [
     AlertModule.forRoot(),
