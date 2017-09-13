@@ -2,6 +2,20 @@
   background: #74AFAD;
 }
 
+.navbar {
+	margin-bottom: 0!important;
+  -webkit-border-radius:0;
+  -moz-border-radius:0;
+  border-radius:0;
+  color: white;
+}
+
+.home-button {
+  color: white;
+  margin: 0.7em;
+  font-size: 1.5em;
+}
+
 .tmp {
   color: #558C89;
   color: #74AFAD;

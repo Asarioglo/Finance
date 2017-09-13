@@ -1,8 +1,88 @@
-@import "../../assets/resume/css/style.css";
-@import "../../assets/resume/css/responsive.css";
-@import "//fonts.googleapis.com/css?family=Kristi|Alegreya+Sans:300";
-@import "//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css";
+body {
+  background: #f4f4f4;
+  color: #757575;
+  font-family: 'Alegreya Sans', sans-serif;
+  letter-spacing: 2px;
+  padding-bottom: 60px;
+}
 
-.container {
+#container {
+  background: #fff;
+  padding: 70px 75px;
+  margin: 50px auto;
   margin-top: 0;
+  border: 1px solid #a5d4fc;
+}
+
+.header-container {
+  color: #dfdfdf;
+  background: #444444;
+}
+
+.name-container {
+  text-align: center;
+  vertical-align: middle;
+  display: flex;
+  padding: 5em 2em 1em 2em;
+}
+
+.contact-info-container {
+  padding: 1em 5em 2em 5em;
+  font-size: 1em;
+}
+
+#resume-name {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px 1em 15px 1em;
+  border: 2px solid gold;
+  font-size: 2em;
+  font-weight:bold;
+}
+
+.section-header {
+  text-align: left;
+  color: gold;
+  font-size: 2em;
+  border-bottom: 2px solid gold;
+  margin-top: 1em;
+  margin-bottom: 0.3em;
+}
+
+.subsection-header {
+  font-weight: bold;
+  text-align: left;
+}
+
+.time-period {
+  text-align: right;
+  font-size: 0.9em;
+}
+
+.left-separator {
+  border-left: 1px solid black;
+}
+
+.text-section {
+  text-align: left;
+}
+
+.header-piece {
+  display: inline-block;
+}
+.contact-info-separator {
+  display: inline-block;
+}
+
+.seemless-link {
+  color: inherit;
+}
+
+@media (max-width: 750px) {
+  .contact-info-separator {
+    display: none;
+  }
+  .header-piece {
+    display: block;
+  }
 }
