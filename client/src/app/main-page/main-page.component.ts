@@ -20,7 +20,6 @@ export class MainPageComponent extends AbstractMenuPage {
   public initializeMenuItems() {
     this.MainMenuItems.push( new MenuItem("Resume", "/resume","../../assets/resume/img/pen.jpg", "#fff", "#791919"));
     this.MainMenuItems.push(new MenuItem("Applications","/applications", "../../assets/resume/img/programming.jpg", "#c7d2d8"));
-    // this.MainMenuItems.push(new MenuItem( "Photography", "/applications", "../../assets/resume/img/old_camera.jpg", "#e4f2fb"));
     this.MainMenuItems.push(new MenuItem( "Photography", "/applications", "../../assets/resume/img/old_camera_1.jpg", "#fff"));
   }
 
