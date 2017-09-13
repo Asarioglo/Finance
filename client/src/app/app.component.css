@@ -11,3 +11,9 @@
   color: #D9853B;
   color: #ECECEA;
 }
+
+@media (max-width: 780px) {
+  .content {
+    padding: 0;
+  }
+}

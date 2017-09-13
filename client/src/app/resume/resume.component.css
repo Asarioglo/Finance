@@ -9,7 +9,6 @@ body {
 #container {
   background: #fff;
   padding: 70px 75px;
-  margin: 50px auto;
   margin-top: 0;
   border: 1px solid #a5d4fc;
 }
@@ -85,4 +84,25 @@ body {
   .header-piece {
     display: block;
   }
+}
+
+@media (max-width: 780px) {
+  .name-container {
+    padding: 5em 1em 1em 1em;
+  }
+  #container {
+    padding: 0;
+    width: 100%;
+  }
+  .row {
+    margin: 0;
+  }
+
+  #resume-name {
+    width: 100%;
+  }
+
+  /*.content {*/
+    /*padding: 0;*/
+  /*}*/
 }
