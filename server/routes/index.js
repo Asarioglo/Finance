@@ -5,7 +5,7 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
-router.get('/api/name', function(req, res, next){
+router.get('/name', function(req, res, next){
 	res.json({"name": "Sasha"});
 });
 
