@@ -1,0 +1,15 @@
+.login-container {
+  height: 100%;
+  margin-right: 0;
+}
+
+.login-row, .login-col, .login-container{
+  text-align: center;
+  vertical-align: middle;
+  margin: auto;
+  float: none;
+}
+
+.goog-login-btn {
+  margin: auto;
+}

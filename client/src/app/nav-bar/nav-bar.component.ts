@@ -15,7 +15,8 @@ export class NavBarComponent implements OnInit {
   public deploy() {
     this.updateAlerts("info", "Sending a request to pull, build, and deploy the code to asarioglo.com");
     // TODO: this address must become global
-    let body = this.http.get("http://185.179.190.61/api/control/sasha_only/remote/deploy");
+    let body = this.http.get("localhost:3000/api/control/sasha_only/remote/deploy");
+    // let body = this.http.get("http://185.179.190.61/api/control/sasha_only/remote/deploy");
     body.subscribe(
       data => {
         this.updateAlerts("success", "Deploy sucessful, refresh the page to apply the changes");

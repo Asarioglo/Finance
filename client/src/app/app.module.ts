@@ -15,11 +15,16 @@ import {AlertModule} from "ngx-bootstrap";
 import { FinancialComponent } from './financial/financial.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { BasicValuationComponent } from './financial/components/basic-valuation/basic-valuation.component';
+import { AdminPanelComponent } from './admin-panel/admin-panel.component';
 
 const appRoutes = [
   {
     path: "",
     component: MainPageComponent,
+  },
+  {
+    path: "admin-panel",
+    component: AdminPanelComponent
   },
   {
     path: "resume",
@@ -68,7 +73,8 @@ const appRoutes = [
     NavBarComponent,
     FinancialComponent,
     SidebarComponent,
-    BasicValuationComponent
+    BasicValuationComponent,
+    AdminPanelComponent
   ],
   imports: [
     AlertModule.forRoot(),

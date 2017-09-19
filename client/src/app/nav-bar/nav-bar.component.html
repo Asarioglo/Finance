@@ -1,5 +1,6 @@
 <alert *ngFor="let alert of alerts" type="{{alert.type}}" dismissible="true">{{alert.text}}</alert>
 <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-  <a class="home-button glyphicon glyphicon-home" href="/"></a>
-  <a class="home-button glyphicon glyphicon-refresh" (click)="deploy()"></a>
+  <a class="nav-button glyphicon glyphicon-home" href="/"></a>
+  <!--<a class="nav-button glyphicon glyphicon-refresh" (click)="deploy()"></a>-->
+  <a class="nav-button glyphicon glyphicon-console pull-right" routerLink="/admin-panel"></a>
 </nav>
