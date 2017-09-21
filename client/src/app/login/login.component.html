@@ -1,0 +1,17 @@
+<div class="row container">
+  <div class="row">
+    <div class="col-xs-8">
+      <input class="form-control" type="email" placeholder="Email" #emailInput>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-8">
+      <input class="form-control" type="password" placeholder="Password" #passwordInput>
+    </div>
+  </div>
+  <div class="button">
+    <div class="col-xs-8">
+      <button class="btn btn-success" (click)="attemptLogin(emailInput.value, passwordInput.value)">Login</button>
+    </div>
+  </div>
+</div>

@@ -16,6 +16,10 @@ import { FinancialComponent } from './financial/financial.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { BasicValuationComponent } from './financial/components/basic-valuation/basic-valuation.component';
 import { AdminPanelComponent } from './admin-panel/admin-panel.component';
+import { LoginComponent } from './login/login.component';
+import { AdminConsoleComponent } from './admin-console/admin-console.component';
+import {AuthenticationService} from "./baseclasses/AuthenticationService";
+import {HttpModule} from "@angular/http";
 
 const appRoutes = [
   {
@@ -24,7 +28,17 @@ const appRoutes = [
   },
   {
     path: "admin-panel",
-    component: AdminPanelComponent
+    component: AdminPanelComponent,
+    children: [
+      {
+        path: "console",
+        component: AdminConsoleComponent,
+      },
+      {
+        path: "login",
+        component: LoginComponent,
+      }
+    ]
   },
   {
     path: "resume",
@@ -74,7 +88,9 @@ const appRoutes = [
     FinancialComponent,
     SidebarComponent,
     BasicValuationComponent,
-    AdminPanelComponent
+    AdminPanelComponent,
+    LoginComponent,
+    AdminConsoleComponent
   ],
   imports: [
     AlertModule.forRoot(),
@@ -83,9 +99,12 @@ const appRoutes = [
       {enableTracing: true}
     ),
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [
+    AuthenticationService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
