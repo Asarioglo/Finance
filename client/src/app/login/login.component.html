@@ -1,17 +1,42 @@
 <div class="row container">
-  <div class="row">
-    <div class="col-xs-8">
-      <input class="form-control" type="email" placeholder="Email" #emailInput>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="email">Password</label>
+      <input
+        id="email"
+        clsas="form-control"
+        type="email"
+        formControlName="email"
+        [formGroup]="form"
+      >
     </div>
-  </div>
-  <div class="row">
-    <div class="col-xs-8">
-      <input class="form-control" type="password" placeholder="Password" #passwordInput>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input
+        id="password"
+        clsas="form-control"
+        type="password"
+        formControlName="password"
+        [formGroup]="form"
+      >
     </div>
-  </div>
-  <div class="button">
-    <div class="col-xs-8">
-      <button class="btn btn-success" (click)="attemptLogin(emailInput.value, passwordInput.value)">Login</button>
+    <div class="form-group">
+      <label for="confirmPassword">Confirm Password</label>
+      <input
+        id="confirmPassword"
+        clsas="form-control"
+        type="password"
+        formControlName="confirmPassword"
+        [formGroup]="form"
+      >
     </div>
-  </div>
+    <div class="form-group">
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+  <!--<div class="button">-->
+    <!--<div class="col-xs-8">-->
+      <!--&lt;!&ndash;<button class="btn btn-success" (click)="attemptLogin(emailInput.value, passwordInput.value)">Login</button>&ndash;&gt;-->
+    <!--</div>-->
+  <!--</div>-->
 </div>

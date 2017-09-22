@@ -20,6 +20,8 @@ import { LoginComponent } from './login/login.component';
 import { AdminConsoleComponent } from './admin-console/admin-console.component';
 import {AuthenticationService} from "./baseclasses/AuthenticationService";
 import {HttpModule} from "@angular/http";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {ApiConnectionService} from "./baseclasses/ApiConnectionService";
 
 const appRoutes = [
   {
@@ -100,10 +102,13 @@ const appRoutes = [
     ),
     BrowserModule,
     HttpClientModule,
-    HttpModule
+    HttpModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
-    AuthenticationService
+    AuthenticationService,
+    ApiConnectionService
   ],
   bootstrap: [AppComponent]
 })
