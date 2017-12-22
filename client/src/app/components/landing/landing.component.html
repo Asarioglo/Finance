@@ -1,0 +1,9 @@
+<div *ngFor="let item of FamilyMembers" class="row selection-option-container" [style.height]="getItemHeight()">
+  <div class="col-sm-12 selection-option-column">
+    <div class="selection-option-link-container">
+      <div routerLink="{{item.FirstName + item.LastName}}" class="selection-option-content-container">
+        <span class="selection-title-text">{{item.FirstName}} {{item.LastName}}</span>
+      </div>
+    </div>
+  </div>
+</div>

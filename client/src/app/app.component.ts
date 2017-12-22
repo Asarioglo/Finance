@@ -9,14 +9,9 @@ import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 })
 export class AppComponent implements OnInit {
   title = 'app';
-  private name: string;
 
-  constructor(private http: HttpClient) {}
+  constructor() {}
 
   ngOnInit() {
-    let body = this.http.get("http://localhost:3000/api/name",{});
-    body.subscribe((res: any) => {
-      this.name = res.name;
-    })
   }
 }

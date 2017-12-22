@@ -15,7 +15,7 @@ var configDB 		= require('./config/database');
 // configuration ==============================================================================
 
 // mongoose.connect(configDB.url);
-require('./config/passport.js')(passport);
+// require('./config/passport.js')(passport);
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -30,7 +30,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
 // TODO: move the secret into an external config not to expose
-app.use(session({secret: "secretsessionwordlooool"}));
+// app.use(session({secret: "secretsessionwordlooool"}));
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
@@ -39,11 +39,12 @@ app.use(flash());
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    console.log("headers added");
     next();
 });
 
 // routes ====================================================================================
 app.use(require("./routes/index.js")(app, passport));
-app.use(require("./routes/users.js")(app, passport));
+// app.use(require("./routes/users.js")(app, passport));
 
 module.exports = app;

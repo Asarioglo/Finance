@@ -3,30 +3,33 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import {HttpClientModule} from "@angular/common/http";
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import {RouterModule} from "@angular/router";
-import { MainPageComponent } from './main-page/main-page.component';
-import { PhotographyComponent } from './photography/photography.component';
-import { ApplicationsComponent } from './applications/applications.component';
-import { ResumeComponent } from './resume/resume.component';
-import { CandidPhotographyComponent } from './candid-photography/candid-photography.component';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { MainPageComponent } from './components/main-page/main-page.component';
+import { PhotographyComponent } from './components/photography/photography.component';
+import { ApplicationsComponent } from './components/applications/applications.component';
+import { ResumeComponent } from './components/resume/resume.component';
+import { CandidPhotographyComponent } from './components/candid-photography/candid-photography.component';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import {AlertModule} from "ngx-bootstrap";
-import { FinancialComponent } from './financial/financial.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
-import { BasicValuationComponent } from './financial/components/basic-valuation/basic-valuation.component';
-import { AdminPanelComponent } from './admin-panel/admin-panel.component';
-import { LoginComponent } from './login/login.component';
-import { AdminConsoleComponent } from './admin-console/admin-console.component';
-import {AuthenticationService} from "./baseclasses/AuthenticationService";
+import { FinancialComponent } from './components/financial/financial.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { BasicValuationComponent } from './components/financial/components/basic-valuation/basic-valuation.component';
+import { AdminPanelComponent } from './components/admin-panel/admin-panel.component';
+import { LoginComponent } from './components/login/login.component';
+import { AdminConsoleComponent } from './components/admin-console/admin-console.component';
+import {AuthenticationService} from "./components/baseclasses/AuthenticationService";
 import {HttpModule} from "@angular/http";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import {ApiConnectionService} from "./baseclasses/ApiConnectionService";
+import {ApiConnectionService} from "./components/baseclasses/ApiConnectionService";
+import { LandingComponent } from './components/landing/landing.component';
+import {RequestService} from "./services/request.service";
+import {UrlStorage} from "./services/urls";
 
 const appRoutes = [
   {
     path: "",
-    component: MainPageComponent,
+    component: LandingComponent,
   },
   {
     path: "admin-panel",
@@ -92,7 +95,8 @@ const appRoutes = [
     BasicValuationComponent,
     AdminPanelComponent,
     LoginComponent,
-    AdminConsoleComponent
+    AdminConsoleComponent,
+    LandingComponent
   ],
   imports: [
     AlertModule.forRoot(),
@@ -108,7 +112,9 @@ const appRoutes = [
   ],
   providers: [
     AuthenticationService,
-    ApiConnectionService
+    ApiConnectionService,
+    RequestService,
+    UrlStorage
   ],
   bootstrap: [AppComponent]
 })
