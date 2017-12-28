@@ -12,7 +12,7 @@ import {PasswordValidator} from "../baseclasses/PasswordValidator";
 export class LoginComponent implements OnInit {
   public email: string = "";
   public pass: string = "";
-  private form: FormGroup;
+  public form: FormGroup;
 
   constructor(
     private router: Router,
