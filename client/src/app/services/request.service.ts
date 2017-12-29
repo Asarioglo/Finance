@@ -7,7 +7,7 @@ import {Observable} from "rxjs/Observable";
 @Injectable()
 export class RequestService {
 
-  private host = 'https://185.179.190.61';
+  private host = 'https://api.sarioglo.com';
   private port = '80';
 
   constructor(private http: Http, private urlProvider: UrlStorage) {};
