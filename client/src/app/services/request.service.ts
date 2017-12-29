@@ -7,7 +7,7 @@ import {Observable} from "rxjs/Observable";
 @Injectable()
 export class RequestService {
 
-  private host = 'http://185.179.190.61';
+  private host = 'https://185.179.190.61';
   private port = '80';
 
   constructor(private http: Http, private urlProvider: UrlStorage) {};
