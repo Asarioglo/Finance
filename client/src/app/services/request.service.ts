@@ -8,11 +8,11 @@ import {Observable} from "rxjs/Observable";
 export class RequestService {
 
   private host = 'https://api.sarioglo.com';
-  private port = '80';
+  private port = null;
 
   constructor(private http: Http, private urlProvider: UrlStorage) {};
 
   getFamilyMembers(): Observable<any> {
-    return this.http.get(`${this.host}:${this.port}${this.urlProvider.getUrl('familyList')}`).map((res: Response) => res.json());
+    return this.http.get(`${this.host}${this.port === null ? "" : `:${this.port}`}${this.urlProvider.getUrl('familyList')}`).map((res: Response) => res.json());
   }
 }
