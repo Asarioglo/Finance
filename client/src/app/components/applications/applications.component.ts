@@ -1,14 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import {AbstractMenuPage} from "../baseclasses/AbstractMenuPage";
 import {MenuItem} from "../baseclasses/MenuItem";
-import {MainPageComponent} from "../main-page/main-page.component";
+import {AlexandrSarioglo} from "../alexandr-sarioglo/alexandr-sarioglo.component";
 
 @Component({
   selector: 'app-applications',
   templateUrl: './applications.component.html',
   styleUrls: ['./applications.component.css']
 })
-export class ApplicationsComponent extends MainPageComponent {
+export class ApplicationsComponent extends AlexandrSarioglo {
   private name: string;
 
   constructor() {

@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import {HttpClientModule} from "@angular/common/http";
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import {RouterModule} from "@angular/router";
-import { MainPageComponent } from './components/main-page/main-page.component';
+import { AlexandrSarioglo } from './components/alexandr-sarioglo/alexandr-sarioglo.component';
 import { PhotographyComponent } from './components/photography/photography.component';
 import { ApplicationsComponent } from './components/applications/applications.component';
 import { ResumeComponent } from './components/resume/resume.component';
@@ -32,6 +32,16 @@ const appRoutes = [
     component: LandingComponent,
   },
   {
+    path: "AlexandrSarioglo",
+    component: AlexandrSarioglo,
+    children: [
+      {
+        path: "resume",
+        component: ResumeComponent
+      },
+    ]
+  },
+  {
     path: "admin-panel",
     component: AdminPanelComponent,
     children: [
@@ -44,10 +54,6 @@ const appRoutes = [
         component: LoginComponent,
       }
     ]
-  },
-  {
-    path: "resume",
-    component: ResumeComponent
   },
   {
     path: "applications",
@@ -84,7 +90,7 @@ const appRoutes = [
   declarations: [
     AppComponent,
     PageNotFoundComponent,
-    MainPageComponent,
+    AlexandrSarioglo,
     PhotographyComponent,
     ApplicationsComponent,
     ResumeComponent,
